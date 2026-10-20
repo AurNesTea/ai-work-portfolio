@@ -1,0 +1,15 @@
+{
+  "response": "ok",
+  "stats": {
+    "models": {
+      "gemini-2.5-flash": {
+        "tokens": {
+          "prompt": 8,
+          "candidates": 3,
+          "cached": 1,
+          "total": 12
+        }
+      }
+    }
+  }
+}

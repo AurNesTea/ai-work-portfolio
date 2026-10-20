@@ -1,0 +1,87 @@
+id: phase2-packs
+brief_path: briefs/phase2-packs.md
+trigger: manual
+steps:
+  - id: p2-1
+    role: backend
+    prompt_file: prompts/phase2-packs/p2-1.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_packs.py
+
+  - id: p2-2
+    role: backend
+    prompt_file: prompts/phase2-packs/p2-2.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_packs_apply.py
+
+  - id: p2-3
+    role: backend
+    prompt_file: prompts/phase2-packs/p2-3.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1200
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_packs_roles.py
+
+  - id: p2-4
+    role: backend
+    prompt_file: prompts/phase2-packs/p2-4.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1200
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_packs_delivery.py
+
+  - id: p2-5
+    role: backend
+    prompt_file: prompts/phase2-packs/p2-5.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_packs_endpoints.py
+
+  - id: p2-6
+    role: frontend
+    prompt_file: prompts/phase2-packs/p2-6.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -c "import subprocess,sys; r=subprocess.run(['npm','run','build'],cwd='panel'); sys.exit(r.returncode)"
+
+  - id: p2-7
+    role: backend
+    prompt_file: prompts/phase2-packs/p2-7.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 0
+    test_command: python -m pytest -q

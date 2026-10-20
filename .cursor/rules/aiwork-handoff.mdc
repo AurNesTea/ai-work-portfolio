@@ -1,0 +1,23 @@
+---
+description: 寫完 brief、workflow、prompts 後呼叫 aiwork run
+globs: briefs/**/*.md,workflows/**/*.yaml,workflows/**/*.yml,prompts/**/*.md
+alwaysApply: false
+---
+
+# 派工
+
+這次對話剛寫完同一任務的三個檔，才呼叫 `aiwork run`。檔案只是開著、或只改了既有 workflow，不要跑。
+
+三個檔：
+
+- `briefs/<task-id>.md`
+- `workflows/<task-id>.yaml`
+- `prompts/<task-id>/*.md`
+
+步驟規則詳見 [AGENTS.md](AGENTS.md)。每步二選一：寫 `role`，或同時寫 `agent` 與 `model`；不寫 skills。
+
+```powershell
+aiwork run workflows/<task-id>.yaml
+```
+
+有印出 `runs/<id>`，且該目錄的 `status.json` 存在，才算派工。面板不開對話。

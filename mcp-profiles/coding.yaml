@@ -1,0 +1,4 @@
+id: coding
+servers:
+  - name: notion
+    allow_tools: ["search", "fetch"]

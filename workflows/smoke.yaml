@@ -1,0 +1,24 @@
+id: smoke
+brief_path: briefs/smoke.md
+trigger: manual
+steps:
+  - id: step1
+    agent: cursor
+    model: composer-2
+    prompt_file: prompts/smoke/step1.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 120
+    on_fail: stop
+    approval: false
+    test_command: python -c "import sys; sys.exit(0)"
+  - id: step2
+    agent: cursor
+    model: composer-2
+    prompt_file: prompts/smoke/step2.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 120
+    on_fail: stop
+    approval: false
+    test_command: python -c "import sys; sys.exit(0)"

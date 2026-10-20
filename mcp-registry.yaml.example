@@ -1,0 +1,7 @@
+# Local MCP connection registry (EXAMPLE — copy to mcp-registry.yaml, gitignored)
+
+# servers:
+#   - name: notion
+#     command: npx
+#     args: ["-y", "@notionhq/notion-mcp-server"]
+#     env: {}

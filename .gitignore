@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+mcp-registry.yaml
+.superpowers/
+runs/*/
+!runs/.gitkeep
+panel/node_modules/
+panel/dist/
+panel/src-tauri/target/
+data/*.sqlite
+data/*.sqlite-*
+
+# portfolio hygiene
+fyi.md
+FYI.md
+data/
+runs/*/
+!runs/.gitkeep
+.cursor/mcp.json

@@ -1,0 +1,27 @@
+version: 1
+roles:
+  planner:
+    agent: gemini
+    model: gemini-4-argon-high
+    effort: high
+    description: 範圍不清、要架構計畫／契約／驗收條件 (PlanSeal)
+  writer:
+    agent: gemini
+    model: gemini-3.8-flash-medium
+    effort: medium
+    description: 成果轉譯、白話摘要、架構圖、diff 與文件整理 (Reader Ready)
+  frontend:
+    agent: gemini
+    model: gemini-3.8-flash-high
+    effort: high
+    description: 前端 UI/UX 實作、視覺調整、互動與前端 bug 修復
+  backend:
+    agent: gemini
+    model: gemini-3.8-flash-high
+    effort: high
+    description: 後端 API、資料庫、核心邏輯實作與後端 bug 修復
+  reviewer:
+    agent: gemini
+    model: gemini-4-argon-medium
+    effort: high
+    description: 唯讀審查 PR/Diff、對照規格與標準、執行測試門禁驗收

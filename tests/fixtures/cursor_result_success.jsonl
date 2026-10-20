@@ -1,0 +1,2 @@
+{"type":"system","subtype":"init","session_id":"sess-1","model":"Composer 2"}
+{"type":"result","subtype":"success","session_id":"sess-1","usage":{"inputTokens":7,"outputTokens":50,"cacheReadTokens":100,"cacheWriteTokens":20},"result":"ok"}

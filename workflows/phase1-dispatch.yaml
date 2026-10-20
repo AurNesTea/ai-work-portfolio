@@ -1,0 +1,100 @@
+id: phase1-dispatch
+brief_path: briefs/phase1-dispatch.md
+trigger: manual
+steps:
+  - id: p1-1
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-1.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_dispatch.py -q
+  - id: p1-2
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-2.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q
+  - id: p1-3
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-3.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1200
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m aiwork roles --check
+  - id: p1-4
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-4.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 900
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 0
+    test_command: python -c "from pathlib import Path; assert Path('AGENTS.md').is_file() and Path('CLAUDE.md').is_file()"
+  - id: p1-5
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-5.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1800
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_panel_actions.py -q
+  - id: p1-6
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-6.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1200
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -c "import subprocess,sys; r=subprocess.run(['npm','run','build'],cwd='panel'); sys.exit(r.returncode)"
+  - id: p1-8
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-8.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 1200
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 1
+    test_command: python -m pytest -q tests/test_agents_account.py -q
+  - id: p1-7
+    agent: gemini
+    model: gemini-3.8-flash-high
+    prompt_file: prompts/phase1-dispatch/p1-7.md
+    mcp_profile: default
+    skills: []
+    timeout_sec: 2400
+    on_fail: stop
+    approval: false
+    effort: high
+    max_retries: 0
+    test_command: python -m pytest -q

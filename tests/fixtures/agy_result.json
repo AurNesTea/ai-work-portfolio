@@ -1,0 +1,12 @@
+{
+  "conversation_id": "conv-1",
+  "status": "SUCCESS",
+  "response": "ok",
+  "usage": {
+    "input_tokens": 10,
+    "output_tokens": 4,
+    "thinking_tokens": 2,
+    "cache_read_tokens": 3,
+    "total_tokens": 19
+  }
+}

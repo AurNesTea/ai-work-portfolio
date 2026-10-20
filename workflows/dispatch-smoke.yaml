@@ -1,0 +1,20 @@
+id: dispatch-smoke
+brief_path: briefs/dispatch-smoke.md
+trigger: manual
+steps:
+  - id: step1
+    role: frontend
+    prompt_file: prompts/dispatch-smoke/step1.md
+    mcp_profile: default
+    timeout_sec: 120
+    on_fail: stop
+    approval: false
+    test_command: python -c "import sys; sys.exit(0)"
+  - id: step2
+    role: writer
+    prompt_file: prompts/dispatch-smoke/step2.md
+    mcp_profile: default
+    timeout_sec: 120
+    on_fail: stop
+    approval: true
+    test_command: python -c "import sys; sys.exit(0)"
